@@ -11488,9 +11488,9 @@ header.masthead {
   background-image: url("../assets/img/PEEPSDARK.png");
 
   background-attachment: fixed;
-  background-position-y: 10rem;
+  background-position-y: center;
   background-repeat: no-repeat;
-  background-size: 110%;
+  background-size: cover;
   
 }
 header.masthead .masthead-subheading {
