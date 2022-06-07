@@ -16,14 +16,15 @@ window.addEventListener('DOMContentLoaded', event => {
         if (!navbarCollapsible) {
             return;
         }
-        navbarCollapsible.classList.add('navbar-shrink')
-        /*
+        
+        //navbarCollapsible.classList.add('navbar-shrink')
+        
         if (window.scrollY === 0) {
             navbarCollapsible.classList.remove('navbar-shrink')
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
         }
-        */
+        
 
     };
 

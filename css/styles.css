@@ -135,13 +135,14 @@ ENLARGE ON SCROLL
 
 */
 
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: var(--bs--off-white);
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
@@ -698,6 +699,27 @@ progress {
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
+  overflow: hidden;
+}
+
+
+/* SLIDING BACKGROUND */
+/*
+.sliding-background {
+  background: url("../assets/img/PEEPSDARK.png") repeat-x;
+  height: 560px;
+  width: 5076px;
+  animation: slide 60s linear infinite;
+}
+*/
+
+@keyframes slide{
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0);
+  }
 }
 
 @media (min-width: 576px) {
@@ -3113,9 +3135,9 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 0.25rem rgba(255, 208, 38, 0.5);
 }
 .btn-primary:disabled, .btn-primary.disabled {
-  color: #fff;
-  background-color: #ffc800;
-  border-color: #ffc800;
+  color: #f8f0e3;
+  background-color: #56703b;
+  border-color: #56703b;
 }
 
 .btn-secondary {
@@ -11362,7 +11384,7 @@ p {
 
 .page-section {
   padding: 6rem 0;
-  background-color: var(--bs-off-white)
+  background-color: var(--bs-off-white);
 }
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 2.5rem;
@@ -11411,8 +11433,9 @@ p {
   text-transform: uppercase;
   font-weight: 700;
 }
+/* Robolobos Thing */
 #mainNav .navbar-brand {
-  color: #56703b;
+  color: var(--bs-off-white);
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   letter-spacing: 0.0625em;
@@ -11485,6 +11508,7 @@ header.masthead {
 
   /* WALLPAPER PARALLAX */
 
+  
   background-image: url("../assets/img/PEEPSDARK.png");
 
   background-attachment: fixed;
@@ -11492,7 +11516,31 @@ header.masthead {
   background-repeat: no-repeat;
   background-size: cover;
   
+
+  /* SLIDING WALLPAPER */
+  /*
+  background: url("../assets/img/PEEPSDARK.png") repeat-x;
+  background-position-y: center;
+  height: 560px;
+  width: 5076px;
+  animation: slide 10s linear infinite;
+  */
 }
+
+@keyframes backgroundScroll {
+  0% {background-position: 0 0;}
+  100% {background-position: -5076px 0;}
+}
+
+@keyframes slide{
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;
@@ -11509,7 +11557,7 @@ header.masthead .masthead-heading {
   color: #f8f0e3;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
+/* SERVICES */
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 17rem;
@@ -11529,8 +11577,9 @@ header.masthead .masthead-heading {
   }
 }
 
+/* PORTFOLIO */
 .portfolio-section {
-  background-color: #56703b;
+  background-color: var(--bs-forest-green);
 }
 
 #portfolio .portfolio-item {
@@ -11552,19 +11601,19 @@ header.masthead .masthead-heading {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity ease-in-out 0.25s;
+  transition: opacity ease-in-out .3s;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   font-size: 1.25rem;
-  color: white;
+  color: --off;
 }
 #portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
-  opacity: 1;
+  opacity: 0.95;
 }
 #portfolio .portfolio-item .portfolio-caption {
   padding: 1.5rem;
   text-align: center;
-  background-color: #fff;
+  background-color: white;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
   font-size: 1.5rem;
@@ -11616,12 +11665,13 @@ header.masthead .masthead-heading {
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
 }
-
+/* ABOUT US TIMELINE */
 .timeline {
   position: relative;
   padding: 0;
   list-style: none;
 }
+/* line */
 .timeline:before {
   position: absolute;
   top: 0;
@@ -11630,7 +11680,7 @@ header.masthead .masthead-heading {
   width: 2px;
   margin-left: -1.5px;
   content: "";
-  background-color: #e9ecef;
+  background-color: var(--bs-gray);
 }
 .timeline > li {
   position: relative;
@@ -11673,10 +11723,34 @@ header.masthead .masthead-heading {
   height: 80px;
   margin-left: 0;
   text-align: center;
-  color: white;
-  border: 7px solid #56703b;
+  color: black;
+  border: 7px solid #f5bd02;
   border-radius: 100%;
-  background-color: #ffc800;
+  background-color: #f4f0db;
+}
+
+/*
+.timeline .timeline-image {
+  transform: scale(1);
+  transition: transform .5s;
+}
+
+.timeline .timeline-image:hover {
+  transform: scale(1.1);
+}
+*/
+
+.timeline-image {
+  transform: scale(1);
+  transition: .5s;
+}
+
+.timeline-image:hover {
+  transform: scale(100);
+}
+
+.timeline-text-bottom {
+  color: black;
 }
 
 .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
@@ -11787,7 +11861,7 @@ header.masthead .masthead-heading {
     padding: 0 100px 20px 20px;
   }
 }
-
+/* Team */
 .team-member {
   margin-bottom: 3rem;
   text-align: center;
@@ -11802,7 +11876,7 @@ header.masthead .masthead-heading {
 .team-member img {
   width: 14rem;
   height: 14rem;
-  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  border: 0.5rem solid #f8f0e3;
 }
 .team-member h4, .team-member .h4 {
   margin-top: 1.5rem;
@@ -11822,7 +11896,7 @@ header.masthead .masthead-heading {
 /* CONTACT US */
 section#contact {
   background-color: #212529;
-  background-image: url("../assets/img/fummy2.png");
+  background-image: url("../assets/img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
 }
