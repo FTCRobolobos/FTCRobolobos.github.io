@@ -11695,7 +11695,6 @@ header.masthead .masthead-heading {
   clear: both;
 }
 .timeline > li .timeline-panel {
-  position: relative;
   float: right;
   width: 100%;
   padding: 0 20px 0 100px;
@@ -11886,16 +11885,38 @@ header.masthead .masthead-heading {
   width: 14rem;
   height: 14rem;
   border: 0.5rem solid #f8f0e3;
+  opacity: 1;
+  transition: opacity ease-in .3s;
 }
 .team-member h4, .team-member .h4 {
   margin-top: 1.5rem;
   margin-bottom: 0;
 }
 
+.team-member:hover img {
+  opacity: 0.5;
+}
+
+/* TEAM MEMBER BIO IMAGE TEXT */
+.team-member-img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -300%);
+  opacity: 0;
+  transition: opacity ease-in .3s;
+  font-size: larger;
+  color: #f8f0e3;
+}
+
+.team-member:hover > .team-member-img-text {
+  opacity: 1;
+}
+
 .img-brand {
   height: 2.75rem;
   transform: scale(1);
-  transition: transform .5s;
+  transition: transform .3s;
 }
 
 .img-brand:hover {
@@ -11961,4 +11982,9 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+.schitzo-activation {
+  opacity: 0;
 }
