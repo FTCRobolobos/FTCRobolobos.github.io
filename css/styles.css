@@ -11746,7 +11746,16 @@ header.masthead .masthead-heading {
 }
 
 .timeline-image:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+
+.timeline-panel{
+  transform: scale(1);
+  transition: .5s;
+}
+
+.timeline-image:hover + .timeline-panel {
+  transform: scale(1.1)
 }
 
 .timeline-text-bottom {
