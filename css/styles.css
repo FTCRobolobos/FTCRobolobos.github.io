@@ -11513,6 +11513,7 @@ header.masthead {
 
   background-attachment: fixed;
   background-position-y: center;
+  background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
   
