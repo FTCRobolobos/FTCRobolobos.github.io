@@ -11920,7 +11920,7 @@ header.masthead .masthead-heading {
 }
 
 .img-brand {
-  height: 2.75rem;
+  height: 4rem;
   transform: scale(1);
   transition: transform .3s;
 }
